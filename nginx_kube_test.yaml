@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+
+metadata:
+  name: nginx-nodes
+  namespace: default
+spec:
+  clusterIP: None
+  selector:
+    app: nginx
+  ports:
+    - name: http
+      port: 80
